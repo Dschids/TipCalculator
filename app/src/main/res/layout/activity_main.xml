@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/idTxtViewTitle"
+        android:layout_width="251dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center|center_horizontal"
+        android:text="@string/txtTitle"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEditTextMealCost"
+        android:layout_width="215dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/edtTxtHint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtViewTitle" />
+
+    <Spinner
+        android:id="@+id/idSpnrTip"
+        android:layout_width="158dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:entries="@array/spnrItems"
+        android:prompt="@string/spnrPrompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEditTextMealCost" />
+
+    <Button
+        android:id="@+id/idBtnCalc"
+        android:layout_width="170dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/btnCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSpnrTip" />
+
+    <TextView
+        android:id="@+id/idTxtTipResult"
+        android:layout_width="292dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnCalc" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="339dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtTipResult"
+        app:srcCompat="@drawable/cashy_money" />
+</androidx.constraintlayout.widget.ConstraintLayout>
